@@ -1,0 +1,17 @@
+.product-row {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.product-col {
+  @media screen and (min-width: 768px) {
+    flex: 1 0 21%;
+  }
+  flex: 1 0 91%;
+  margin: 5px;
+  min-height: 450px;
+}
