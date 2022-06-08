@@ -1,5 +1,6 @@
 import './Header.scss';
 import { Container, Navbar } from 'react-bootstrap';
+import { Cart } from '../Cart/Cart';
 
 export const Header = () => {
   return (
@@ -15,14 +16,7 @@ export const Header = () => {
               className="d-inline-block align-top"
             />
           </Navbar.Brand>
-          <button className="cart-icon-container btn btn-link">
-            <strong className="text-white cart-value">2</strong>
-            <img
-              alt="cart icon"
-              src="/cart.png"
-              className="d-inline-block align-top"
-            />
-          </button>
+          <Cart />
         </Container>
       </Navbar>
     </>

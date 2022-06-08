@@ -1,0 +1,17 @@
+.cart-details {
+  max-height: 500px;
+  min-height: 20vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 2;
+  background-color: #fff;
+  @media screen and (min-width: 768px) {
+    width: 350px;
+    position: absolute;
+    top: 78px;
+    right: 30px;
+  }
+  .text-right {
+    text-align: right;
+  }
+}

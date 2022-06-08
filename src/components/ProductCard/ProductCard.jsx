@@ -4,7 +4,7 @@ import { ProductPrice } from '../ProductPrice/ProductPrice';
 
 export const ProductCard = ({ product }) => {
   return (
-    <section className="card-container text-center border pt-5 px-2 h-100 position-relative">
+    <section className="card-container text-center border pt-2 px-2 h-100 position-relative">
       <div
         className="background-image"
         style={{ backgroundImage: `url(${product.image})` }}
@@ -14,7 +14,7 @@ export const ProductCard = ({ product }) => {
       </p>
       <ProductPrice product={product} />
       <div className="button-container">
-        <Button size="lg">Add to cart</Button>
+        <Button>Add to cart</Button>
       </div>
     </section>
   );
