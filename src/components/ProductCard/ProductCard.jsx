@@ -2,7 +2,7 @@ import './ProductCard.scss';
 import Button from 'react-bootstrap/Button';
 import { ProductPrice } from '../ProductPrice/ProductPrice';
 
-export const ProductCard = ({ product }) => {
+export const ProductCard = ({ product, addToCart }) => {
   return (
     <section className="card-container text-center border pt-2 px-2 h-100 position-relative">
       <div
@@ -14,7 +14,7 @@ export const ProductCard = ({ product }) => {
       </p>
       <ProductPrice product={product} />
       <div className="button-container">
-        <Button>Add to cart</Button>
+        <Button onClick={() => addToCart(product)}>Add to cart</Button>
       </div>
     </section>
   );

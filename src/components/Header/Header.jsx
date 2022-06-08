@@ -2,7 +2,7 @@ import './Header.scss';
 import { Container, Navbar } from 'react-bootstrap';
 import { Cart } from '../Cart/Cart';
 
-export const Header = () => {
+export const Header = ({ itemCount }) => {
   return (
     <>
       <Navbar bg="black" variant="dark">
@@ -16,7 +16,7 @@ export const Header = () => {
               className="d-inline-block align-top"
             />
           </Navbar.Brand>
-          <Cart />
+          <Cart itemCount={itemCount} />
         </Container>
       </Navbar>
     </>

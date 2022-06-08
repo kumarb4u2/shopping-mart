@@ -1,27 +1,23 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { BASE_URL } from '../../config';
 import { CartItems } from '../CartItems/CartItems';
 import './Cart.scss';
 
-export const Cart = () => {
-  const [itemCount, setitemCount] = useState(0);
+export const Cart = ({ itemCount }) => {
   const [showCart, setShowCart] = useState(false);
-
   useEffect(() => {
-    async function fetchItemCount() {
-      try {
-        const response = await axios.get(`${BASE_URL}cartItemCount`);
-        setitemCount(response.data.cartItemCount);
-      } catch (e) {
-        setitemCount(0);
+    const clickListener = (e) => {
+      if (!document.getElementById('cartItemsContainer').contains(e.target)) {
+        setShowCart(false);
       }
-    }
-    fetchItemCount();
+    };
+    document.addEventListener('click', clickListener);
+    return () => {
+      document.removeEventListener('click', clickListener);
+    };
   }, []);
 
   return (
-    <div className="cart-container">
+    <div className="cart-container" id="cartItemsContainer">
       <button
         className="cart-icon-container btn btn-link"
         onClick={() => setShowCart(!showCart)}
