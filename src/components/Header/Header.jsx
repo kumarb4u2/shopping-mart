@@ -5,7 +5,7 @@ import { Cart } from '../Cart/Cart';
 export const Header = ({ itemCount }) => {
   return (
     <>
-      <Navbar bg="black" variant="dark">
+      <Navbar fixed="top" bg="black" variant="dark">
         <Container>
           <Navbar.Brand href="/">
             <img

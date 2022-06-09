@@ -14,7 +14,12 @@ export const ProductCard = ({ product, addToCart }) => {
       </p>
       <ProductPrice product={product} />
       <div className="button-container">
-        <Button onClick={() => addToCart(product)}>Add to cart</Button>
+        <Button
+          id={`addToCart${product.id}`}
+          onClick={() => addToCart(product)}
+        >
+          Add to cart
+        </Button>
       </div>
     </section>
   );
